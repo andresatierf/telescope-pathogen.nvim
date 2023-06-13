@@ -334,7 +334,7 @@ end
 function M.live_grep(opts)
     current_mode = "live_grep"
     opts = opts or {}
-    if M.use_last_search_for_live_grep then
+    if M.use_last_search_for_live_grep and false then
         opts.default_text = vim.fn.getreg("/"):gsub("\\<([^\\]+)\\>", "%1")
     end
     start_builtin(opts)
